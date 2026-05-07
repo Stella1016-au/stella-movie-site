@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stella — 지금 상영 중</title>
+    <title>Stella — Now Playing</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,26 +13,33 @@
     />
   </head>
   <body>
+    <section class="intro" aria-label="Intro">
+      <div class="intro__stage">
+        <img class="intro__ball" src="ball(back_no).png" alt="Purple orb image" />
+        <a class="intro__scroll" href="#content-start" aria-label="Scroll down">Scroll Down</a>
+      </div>
+    </section>
+
     <header class="header">
       <div class="header__inner">
         <h1 class="logo">STELLA</h1>
-        <p class="tagline">지금 상영 중인 영화</p>
+        <p class="tagline">Now Playing Movies</p>
       </div>
     </header>
 
-    <main class="main">
+    <main id="content-start" class="main">
       <section class="hero">
-        <h2 class="hero__title">최신 라인업</h2>
-        <p class="hero__desc">The Movie Database에서 가져온 현재 상영작입니다.</p>
+        <h2 class="hero__title">Latest Lineup</h2>
+        <p class="hero__desc">Current theatrical releases fetched from The Movie Database.</p>
       </section>
 
       <div id="status" class="status" role="status" aria-live="polite"></div>
 
-      <ul id="movie-grid" class="movie-grid" aria-label="영화 목록"></ul>
+      <ul id="movie-grid" class="movie-grid" aria-label="Movie list"></ul>
     </main>
 
     <footer class="footer">
-      <p>데이터 제공: <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">TMDB</a></p>
+      <p>Data provided by <a href="https://www.themoviedb.org/" target="_blank" rel="noopener noreferrer">TMDB</a></p>
     </footer>
 
     <script src="config.js"></script>
